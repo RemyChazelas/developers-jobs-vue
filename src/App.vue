@@ -46,14 +46,16 @@ export default defineComponent({
   }
   button {
     margin: 0 10px;
-    color: #000000;
+    color: #ffffff;
     background: #262626;
     box-shadow:  2px 2px 0 #0f0f0f;
-             /* -2px -2px 0 #2d2d2d; */
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+    margin: 5px;
+    letter-spacing: -0.5px;
+    font-weight: 500;
   }
   button:hover {
     box-shadow: inset 2px 2px 1px #0f0f0f,
