@@ -5,10 +5,11 @@
       <li v-for="job in orderedJobs" :key="job.id">
         <h2>{{ job.title }} in {{ job.location }}</h2>
         <div class="salary">
-          <p>{{ job.salary }} rupees</p>
+          <p>{{ job.salary }} Euros</p>
+          <span>{{ job.confidence }} confidence index</span>
         </div>
         <div class="description">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem omnis voluptatum eius doloremque optio iusto sequi dignissimos. Pariatur earum assumenda dolores possimus quidem quam, reprehenderit aliquid consequuntur amet non facere.</p>
+          <p>{{ job.desc }}</p>
         </div>
       </li>
     </ul>
@@ -70,5 +71,11 @@ export default defineComponent({
     color: chartreuse;
     font-weight: bold;
     margin: 10px 4px;
+  }
+  .salary span {
+    text-decoration: underline chartreuse;
+    font-weight: bold;
+    margin: 10px 4px;
+    font-size: 0.6rem;
   }
 </style>

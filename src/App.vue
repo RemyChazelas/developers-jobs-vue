@@ -1,6 +1,9 @@
 <template>
   <div class="app">
     <header>
+      <div class="title">
+        <h1>Developers Jobs</h1>
+      </div>
       <div class="order">
         <button @click="handleClick('title')">Order by title</button>
         <button @click="handleClick('salary')">Order by salary</button>
@@ -22,11 +25,11 @@ export default defineComponent({
   components: { JobList },
   setup() {
     const jobs = ref<Job[]>([
-      { title: 'farm worker', location: 'lon lon ranch', salary: 30000, id: '1' },
-      { title: 'quarryman', location: 'death mountain', salary: 40000, id: '2' },
-      { title: 'flute player', location: 'the lost woods', salary: 35000, id: '3' },
-      { title: 'fisherman', location: 'lake hylia', salary: 21000, id: '4' },
-      { title: 'prison guard', location: 'gerudo valley', salary: 32000, id: '5' }
+      { title: 'Web Developers', location: 'Paris', salary: 50000, confidence:'Very high', desc: "Full stack developers understand how every part of the web development process takes place and can guide on strategy and best practices. These developers will have an increasingly important role in the web development of the future, and are able to look at the 'big picture'. They are knowledgeable with the server side as well as the client side’s user experience.", id: '1' },
+      { title: 'Software Developers', location: 'Hong Kong', salary: 35000, confidence:'Very high', desc:'Software developers are the creative, brainstorming masterminds behind computer programs of all sorts. While some software developers may focus on a specific program or app, others create giant networks or underlying systems that help trigger and power other programs. This is why there are two main classifications of developers: applications software developers and systems software developers.', id: '2' },
+      { title: 'Game Developers', location: 'New York', salary: 75000, confidence:'Very high', desc:'Video game developers work alone or in teams to write and program games for a variety of video game consoles. Read on to learn more about the many hats a game developer wears.', id: '3' },
+      { title: 'Blockchain Developers', location: 'Anywhere', salary: 50000, confidence:'High', desc:'Blockchain developers enable secure digital transactions by creating systems to record and store blockchain data in a way that prevents changes or hacks. They design secure blockchain technologies, develop application features and interfaces, and maintain client and server-side applications.', id: '4' },
+      { title: 'Mobile Developers', location: 'London', salary: 70000, confidence:'Very high', desc:'A mobile developer is responsible for translating code into user-friendly applications. They collaborate with internal teams to develop functional mobile applications while working in a fast-paced environment. ... Essentially, mobile developers contribute to the design, testing, releasing and support of the application.', id: '5' }
     ])
     const order = ref<OrderTerm>('title')
     const handleClick = (term: OrderTerm) => {
@@ -46,7 +49,7 @@ export default defineComponent({
   }
   button {
     margin: 0 10px;
-    color: #ffffff;
+    color: aliceblue;
     background: #262626;
     box-shadow:  2px 2px 0 #0f0f0f;
     padding: 8px 16px;

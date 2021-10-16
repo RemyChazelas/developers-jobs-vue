@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
 body {
   font-family: "Roboto Mono", monospace;
   background: #262626;
   color: aliceblue;
+}
+
+h1 {
+  font-family: "Architects Daughter", cursive;
 }
