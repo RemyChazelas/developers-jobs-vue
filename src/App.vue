@@ -2,12 +2,13 @@
   <div class="app">
     <header>
       <div class="title">
+        <img src="./assets/heart.png" alt="image of a heart with a symbol of my love to the code">
         <h1>Developers Jobs</h1>
       </div>
       <div class="order">
-        <button @click="handleClick('title')">Order by title</button>
-        <button @click="handleClick('salary')">Order by salary</button>
-        <button @click="handleClick('location')">Order by location</button>
+        <div class='btn' @click="handleClick('title')">Order by title</div>
+        <div class='btn' @click="handleClick('salary')">Order by salary</div>
+        <div class='btn' @click="handleClick('location')">Order by location</div>
       </div>
     </header>
 
@@ -44,15 +45,33 @@ export default defineComponent({
   header {
     text-align: center;
   }
+  
   header .order {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
   }
-  button {
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .title h1{
+  text-decoration: underline 1.4px chartreuse;
+  }
+  .btn {
     margin: 0 10px;
     color: aliceblue;
     background: #262626;
-    box-shadow:  2px 2px 0 #0f0f0f;
-    padding: 8px 16px;
+    box-shadow:  2px 2px 0 #0f0f0f,
+             -2px -2px 0 #2d2d2d;
+    padding: 8px 10px;
     border-radius: 4px;
     cursor: pointer;
     font-family: "Roboto Mono", monospace;
@@ -60,8 +79,20 @@ export default defineComponent({
     letter-spacing: -0.5px;
     font-weight: 500;
   }
-  button:hover {
+  .btn:hover {
+    background: rgb(20, 20, 20);
     box-shadow: inset 2px 2px 1px #0f0f0f,
             inset -2px -2px 1px #2d2d2d;
   }
+  @media (max-width: 500px) { 
+    .btn {
+    margin: 0 5px;    
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin: 5px;
+    letter-spacing: -0.5px;
+    font-size: 0.65rem;
+  }
+  
+   }
 </style>
